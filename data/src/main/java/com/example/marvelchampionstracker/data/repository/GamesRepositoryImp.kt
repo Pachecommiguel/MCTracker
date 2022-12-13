@@ -60,4 +60,8 @@ class GamesRepositoryImp @Inject constructor(
     override fun addEncounterSet(name: String) {
         game.encountersSet.add(name)
     }
+
+    override fun addDifficulty(name: String) {
+        game.difficulty = name
+    }
 }

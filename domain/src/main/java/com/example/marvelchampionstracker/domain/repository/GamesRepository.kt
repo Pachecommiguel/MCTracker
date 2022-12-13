@@ -12,4 +12,5 @@ interface GamesRepository<T> {
     fun addCampaign(isCampaign: Boolean)
     fun addVillain(name: String)
     fun addEncounterSet(name: String)
+    fun addDifficulty(name: String)
 }

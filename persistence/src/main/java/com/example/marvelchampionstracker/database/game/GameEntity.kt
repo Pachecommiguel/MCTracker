@@ -9,7 +9,8 @@ data class GameEntity(
     val playersSet: MutableSet<Player> = mutableSetOf(),
     var isCampaign: Boolean = false,
     var villain: String = String(),
-    val encountersSet: MutableSet<String> = mutableSetOf()
+    val encountersSet: MutableSet<String> = mutableSetOf(),
+    var difficulty: String = String()
 ) {
     data class Player(
         val name: String,
