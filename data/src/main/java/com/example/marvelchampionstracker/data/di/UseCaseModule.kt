@@ -82,4 +82,10 @@ internal abstract class  UseCaseModule {
     abstract fun bindAddDeckTypeToGameUseCase(
         useCase: AddDeckTypeToGameUseCaseImp
     ): AddDeckTypeToGameUseCase
+
+    @Singleton
+    @Binds
+    abstract fun bindAddCampaignToGameUseCase(
+        useCase: AddCampaignToGameUseCaseImp
+    ): AddCampaignToGameUseCase
 }

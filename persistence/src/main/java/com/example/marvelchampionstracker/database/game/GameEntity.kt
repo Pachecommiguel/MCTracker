@@ -6,13 +6,14 @@ import androidx.room.PrimaryKey
 @Entity
 data class GameEntity(
     @PrimaryKey val timeStamp: Long,
-    val players: MutableSet<Player> = mutableSetOf()
+    val playersSet: MutableSet<Player> = mutableSetOf(),
+    var isCampaign: Boolean = false
 ) {
     data class Player(
         val name: String,
         var heroName: String = String(),
         var isHeroKO: Boolean = false,
-        val aspects: MutableSet<String> = mutableSetOf(),
+        val aspectsSet: MutableSet<String> = mutableSetOf(),
         var deckType: String = String()
     )
 }

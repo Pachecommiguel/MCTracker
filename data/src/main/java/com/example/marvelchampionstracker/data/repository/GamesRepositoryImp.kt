@@ -26,26 +26,30 @@ class GamesRepositoryImp @Inject constructor(
 
     override fun addPlayer(name: String) {
         val entity = EntityMapper.toPlayerEntity(name)
-        game.players.add(entity)
+        game.playersSet.add(entity)
     }
 
     override fun createGame(timeStamp: Long) {
         game = EntityMapper.toGameEntity(timeStamp)
     }
 
-    override fun addHeroToPlayer(name: String) {
-        game.players.last().heroName = name
+    override fun addHero(name: String) {
+        game.playersSet.last().heroName = name
     }
 
     override fun addHeroKO(isKO: Boolean) {
-        game.players.last().isHeroKO = isKO
+        game.playersSet.last().isHeroKO = isKO
     }
 
     override fun addAspect(aspect: String) {
-        game.players.last().aspects.add(aspect)
+        game.playersSet.last().aspectsSet.add(aspect)
     }
 
     override fun addDeckType(type: String) {
-        game.players.last().deckType = type
+        game.playersSet.last().deckType = type
+    }
+
+    override fun addCampaign(isCampaign: Boolean) {
+        game.isCampaign = isCampaign
     }
 }
