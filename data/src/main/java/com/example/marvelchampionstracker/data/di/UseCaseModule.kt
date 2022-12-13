@@ -90,4 +90,8 @@ internal abstract class  UseCaseModule {
     @Singleton
     @Binds
     abstract fun bindSaveCurrentGameUseCase(useCase: SaveCurrentGameUseCaseImp): SaveCurrentGameUseCase
+
+    @Singleton
+    @Binds
+    abstract fun bindGetHeroesUseCase(useCase: GetHeroesUseCaseImp): GetHeroesUseCase
 }

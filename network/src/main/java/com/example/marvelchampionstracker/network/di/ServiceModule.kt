@@ -1,5 +1,6 @@
 package com.example.marvelchampionstracker.network.di
 
+import com.example.marvelchampionstracker.network.card.CardService
 import com.example.marvelchampionstracker.network.pack.PackService
 import dagger.Module
 import dagger.Provides
@@ -15,4 +16,8 @@ object ServiceModule {
     @Singleton
     @Provides
     fun providePacksService(client: Retrofit): PackService = client.create(PackService::class.java)
+
+    @Singleton
+    @Provides
+    fun provideCardsService(client: Retrofit): CardService = client.create(CardService::class.java)
 }

@@ -26,4 +26,8 @@ internal abstract class RepositoryModule {
     @Singleton
     @Binds
     abstract fun bindPacksRepository(repository: PacksRepositoryImp): PacksRepository
+
+    @Singleton
+    @Binds
+    abstract fun bindCardsRepository(repository: CardsRepositoryImp): CardsRepository
 }

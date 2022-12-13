@@ -4,7 +4,9 @@ import com.example.marvelchampionstracker.database.game.GameEntity
 import com.example.marvelchampionstracker.database.pack.PackEntity
 import com.example.marvelchampionstracker.domain.model.CollectionModel
 import com.example.marvelchampionstracker.domain.model.GamesModel
+import com.example.marvelchampionstracker.domain.model.HeroesModel
 import com.example.marvelchampionstracker.domain.model.PacksModel
+import com.example.marvelchampionstracker.network.card.CardsResponse
 import com.example.marvelchampionstracker.network.pack.PacksResponse
 
 object ModelMapper {
@@ -28,4 +30,13 @@ object ModelMapper {
     )
 
     fun toPackModel(response: PacksResponse) = CollectionModel.Pack(response.code, response.name)
+
+    fun toHeroesModel(list: List<CardsResponse>) = HeroesModel(
+        list.filter { it.typeCode == CardTypeCode.HERO.typeCode }.map {
+            HeroesModel.Hero(
+                it.cardSetName,
+                it.imageSrc
+            )
+        }
+    )
 }

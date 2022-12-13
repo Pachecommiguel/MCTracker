@@ -5,4 +5,7 @@ object ApiEndpoints {
 
     // Pack
     const val PACKS = "api/public/packs/"
+
+    // Card
+    const val CARDS = "api/public/cards/{packCode}"
 }
