@@ -10,6 +10,11 @@ data class GameEntity(
 ) {
     data class Player(
         val name: String,
-        var hero: String = String()
-    )
+        val hero: Hero = Hero()
+    ) {
+        data class Hero(
+            var name: String = String(),
+            var isKO: Boolean = false
+        )
+    }
 }
