@@ -45,47 +45,47 @@ internal abstract class  UseCaseModule {
 
     @Singleton
     @Binds
-    abstract fun bindAddPlayerToGameUseCase(useCase: AddPlayerToGameUseCaseImp): AddPlayerToGameUseCase
+    abstract fun bindAddPlayerToGameUseCase(useCase: AddPlayerToCurrentGameUseCaseImp): AddPlayerToCurrentGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddGameUseCase(useCase: AddGameUseCaseImp): AddGameUseCase
+    abstract fun bindAddGameUseCase(useCase: CreateNewGameUseCaseImp): CreateNewGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddHeroToGameUseCase(useCase: AddHeroToGameUseCaseImp): AddHeroToGameUseCase
+    abstract fun bindAddHeroToGameUseCase(useCase: AddHeroToCurrentGameUseCaseImp): AddHeroToCurrentGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddHeroKOToGameUseCase(useCase: AddHeroKOToGameUseCaseImp): AddHeroKOToGameUseCase
+    abstract fun bindAddHeroKOToGameUseCase(useCase: AddHeroStateToCurrentGameUseCaseImp): AddHeroStateToCurrentGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddAspectToGameUseCase(useCase: AddAspectToGameUseCaseImp): AddAspectToGameUseCase
+    abstract fun bindAddAspectToGameUseCase(useCase: AddAspectToCurrentGameUseCaseImp): AddAspectToCurrentGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddDeckTypeToGameUseCase(useCase: AddDeckTypeToGameUseCaseImp): AddDeckTypeToGameUseCase
+    abstract fun bindAddDeckTypeToGameUseCase(useCase: AddDeckTypeToCurrentGameUseCaseImp): AddDeckTypeToCurrentGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddCampaignToGameUseCase(useCase: AddCampaignToGameUseCaseImp): AddCampaignToGameUseCase
+    abstract fun bindAddCampaignToGameUseCase(useCase: AddCampaignModeToCurrentGameUseCaseImp): AddCampaignModeToCurrentGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddVillainToGameUseCase(useCase: AddVillainToGameUseCaseImp): AddVillainToGameUseCase
+    abstract fun bindAddVillainToGameUseCase(useCase: AddVillainToCurrentGameUseCaseImp): AddVillainToCurrentGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddEncounterSetToGameUseCase(useCase: AddEncounterSetToGameUseCaseImp): AddEncounterSetToGameUseCase
+    abstract fun bindAddEncounterSetToGameUseCase(useCase: AddEncounterSetToCurrentGameUseCaseImp): AddEncounterSetToCurrentGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddDifficultyToGameUseCase(useCase: AddDifficultyToGameUseCaseImp): AddDifficultyToGameUseCase
+    abstract fun bindAddDifficultyToGameUseCase(useCase: AddDifficultyToCurrentGameUseCaseImp): AddDifficultyToCurrentGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddResultToGameUseCase(useCase: AddResultToGameUseCaseImp): AddResultToGameUseCase
+    abstract fun bindAddResultToGameUseCase(useCase: AddResultToCurrentGameUseCaseImp): AddResultToCurrentGameUseCase
 
     @Singleton
     @Binds

@@ -1,5 +1,5 @@
 package com.example.marvelchampionstracker.domain.usecase
 
-interface AddCampaignToGameUseCase {
+interface AddCampaignModeToCurrentGameUseCase {
     operator fun invoke(isCampaign: Boolean)
 }

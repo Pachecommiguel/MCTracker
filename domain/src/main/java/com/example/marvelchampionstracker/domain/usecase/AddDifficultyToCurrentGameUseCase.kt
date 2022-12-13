@@ -1,5 +1,5 @@
 package com.example.marvelchampionstracker.domain.usecase
 
-interface AddPlayerToGameUseCase {
+interface AddDifficultyToCurrentGameUseCase {
     operator fun invoke(name: String)
 }

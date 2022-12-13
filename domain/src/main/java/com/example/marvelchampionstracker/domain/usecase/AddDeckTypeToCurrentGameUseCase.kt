@@ -1,5 +1,5 @@
 package com.example.marvelchampionstracker.domain.usecase
 
-interface AddDeckTypeToGameUseCase {
+interface AddDeckTypeToCurrentGameUseCase {
     operator fun invoke(type: String)
 }
