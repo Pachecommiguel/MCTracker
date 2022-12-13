@@ -54,6 +54,10 @@ class GamesRepositoryImp @Inject constructor(
     }
 
     override fun addVillain(name: String) {
-        game.villainsSet.add(name)
+        game.villain = name
+    }
+
+    override fun addEncounterSet(name: String) {
+        game.encountersSet.add(name)
     }
 }

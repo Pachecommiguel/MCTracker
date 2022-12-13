@@ -8,7 +8,8 @@ data class GameEntity(
     @PrimaryKey val timeStamp: Long,
     val playersSet: MutableSet<Player> = mutableSetOf(),
     var isCampaign: Boolean = false,
-    val villainsSet: MutableSet<String> = mutableSetOf()
+    var villain: String = String(),
+    val encountersSet: MutableSet<String> = mutableSetOf()
 ) {
     data class Player(
         val name: String,

@@ -21,15 +21,11 @@ internal abstract class  UseCaseModule {
 
     @Singleton
     @Binds
-    abstract fun bindGetCollectionUseCase(
-        useCase: GetCollectionUseCaseImp
-    ): GetCollectionUseCase<Flow<CollectionModel>>
+    abstract fun bindGetCollectionUseCase(useCase: GetCollectionUseCaseImp): GetCollectionUseCase<Flow<CollectionModel>>
 
     @Singleton
     @Binds
-    abstract fun bindAddPackToCollectionUseCase(
-        useCase: AddPackToCollectionUseCaseImp
-    ): AddPackToCollectionUseCase
+    abstract fun bindAddPackToCollectionUseCase(useCase: AddPackToCollectionUseCaseImp): AddPackToCollectionUseCase
 
     @Singleton
     @Binds
@@ -37,15 +33,11 @@ internal abstract class  UseCaseModule {
 
     @Singleton
     @Binds
-    abstract fun bindGetAvailablePacksUseCase(
-        useCase: GetAvailablePacksUseCaseImp
-    ): GetAvailablePacksUseCase
+    abstract fun bindGetAvailablePacksUseCase(useCase: GetAvailablePacksUseCaseImp): GetAvailablePacksUseCase
 
     @Singleton
     @Binds
-    abstract fun bindRemovePackFromCollectionUseCase(
-        useCase: RemovePackFromCollectionUseCaseImp
-    ): RemovePackFromCollectionUseCase
+    abstract fun bindRemovePackFromCollectionUseCase(useCase: RemovePackFromCollectionUseCaseImp): RemovePackFromCollectionUseCase
 
     @Singleton
     @Binds
@@ -53,9 +45,7 @@ internal abstract class  UseCaseModule {
 
     @Singleton
     @Binds
-    abstract fun bindAddPlayerToGameUseCase(
-        useCase: AddPlayerToGameUseCaseImp
-    ): AddPlayerToGameUseCase
+    abstract fun bindAddPlayerToGameUseCase(useCase: AddPlayerToGameUseCaseImp): AddPlayerToGameUseCase
 
     @Singleton
     @Binds
@@ -67,31 +57,25 @@ internal abstract class  UseCaseModule {
 
     @Singleton
     @Binds
-    abstract fun bindAddHeroKOToGameUseCase(
-        useCase: AddHeroKOToGameUseCaseImp
-    ): AddHeroKOToGameUseCase
+    abstract fun bindAddHeroKOToGameUseCase(useCase: AddHeroKOToGameUseCaseImp): AddHeroKOToGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddAspectToGameUseCase(
-        useCase: AddAspectToGameUseCaseImp
-    ): AddAspectToGameUseCase
+    abstract fun bindAddAspectToGameUseCase(useCase: AddAspectToGameUseCaseImp): AddAspectToGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddDeckTypeToGameUseCase(
-        useCase: AddDeckTypeToGameUseCaseImp
-    ): AddDeckTypeToGameUseCase
+    abstract fun bindAddDeckTypeToGameUseCase(useCase: AddDeckTypeToGameUseCaseImp): AddDeckTypeToGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddCampaignToGameUseCase(
-        useCase: AddCampaignToGameUseCaseImp
-    ): AddCampaignToGameUseCase
+    abstract fun bindAddCampaignToGameUseCase(useCase: AddCampaignToGameUseCaseImp): AddCampaignToGameUseCase
 
     @Singleton
     @Binds
-    abstract fun bindAddVillainToGameUseCase(
-        useCase: AddVillainToGameUseCaseImp
-    ): AddVillainToGameUseCase
+    abstract fun bindAddVillainToGameUseCase(useCase: AddVillainToGameUseCaseImp): AddVillainToGameUseCase
+
+    @Singleton
+    @Binds
+    abstract fun bindAddEncounterSetToGameUseCase(useCase: AddEncounterSetToGameUseCaseImp): AddEncounterSetToGameUseCase
 }
