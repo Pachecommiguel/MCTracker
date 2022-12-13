@@ -3,6 +3,7 @@ package com.example.marvelchampionstracker.domain.repository
 interface GamesRepository<T> {
     suspend fun getAll(limit: Int): T
     suspend fun remove(timeStamp: Long)
+    suspend fun saveCurrentGame()
     fun addPlayerToCurrentGame(player: String)
     fun createNewGame(timeStamp: Long)
     fun addHeroToCurrentGame(hero: String)

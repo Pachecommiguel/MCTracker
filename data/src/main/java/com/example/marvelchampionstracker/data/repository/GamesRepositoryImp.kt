@@ -24,6 +24,10 @@ class GamesRepositoryImp @Inject constructor(
         dao.delete(timeStamp)
     }
 
+    override suspend fun saveCurrentGame() {
+        dao.insert(game)
+    }
+
     override fun addPlayerToCurrentGame(player: String) {
         val entity = EntityMapper.toPlayerEntity(player)
         game.playersSet.add(entity)
