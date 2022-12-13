@@ -1,0 +1,63 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk 33
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+
+    defaultConfig {
+        applicationId "com.example.marvelchampionstracker"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(':domain')
+    implementation project(':data') // Hilt dependency
+
+    implementation "androidx.constraintlayout:constraintlayout:${libraries.constraintlayout}"
+
+    // Material
+    implementation "com.google.android.material:material:${libraries.material}"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:${libraries.navigation}"
+    implementation "androidx.navigation:navigation-ui-ktx:${libraries.navigation}"
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:${libraries.hilt}"
+    kapt "com.google.dagger:hilt-android-compiler:${libraries.hilt}"
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${libraries.coroutines}"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:${libraries.glide}"
+}

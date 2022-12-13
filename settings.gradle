@@ -13,4 +13,8 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MarvelChampionsTracker"
-include ':app'
+include ':ui'
+include ':domain'
+include ':data'
+include ':network'
+include ':persistence'

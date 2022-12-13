@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Marvel Champions Tracker</string>
+
+    <!-- SnackBar -->
+    <string name="snackbar_action_text_got_it">Got it!</string>
+    <string name="snackbar_action_text_undo">Undo</string>
+
+    <!-- Home -->
+    <string name="home_snackbar_message_games">Failed to retrieve games</string>
+    <string name="home_snackbar_message_available_packs">Failed to retrieve available packs</string>
+</resources>
