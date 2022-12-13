@@ -88,4 +88,10 @@ internal abstract class  UseCaseModule {
     abstract fun bindAddCampaignToGameUseCase(
         useCase: AddCampaignToGameUseCaseImp
     ): AddCampaignToGameUseCase
+
+    @Singleton
+    @Binds
+    abstract fun bindAddVillainToGameUseCase(
+        useCase: AddVillainToGameUseCaseImp
+    ): AddVillainToGameUseCase
 }

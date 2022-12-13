@@ -52,4 +52,8 @@ class GamesRepositoryImp @Inject constructor(
     override fun addCampaign(isCampaign: Boolean) {
         game.isCampaign = isCampaign
     }
+
+    override fun addVillain(name: String) {
+        game.villainsSet.add(name)
+    }
 }

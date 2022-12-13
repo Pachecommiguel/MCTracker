@@ -10,4 +10,5 @@ interface GamesRepository<T> {
     fun addAspect(aspect: String)
     fun addDeckType(type: String)
     fun addCampaign(isCampaign: Boolean)
+    fun addVillain(name: String)
 }

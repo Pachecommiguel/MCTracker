@@ -7,7 +7,8 @@ import androidx.room.PrimaryKey
 data class GameEntity(
     @PrimaryKey val timeStamp: Long,
     val playersSet: MutableSet<Player> = mutableSetOf(),
-    var isCampaign: Boolean = false
+    var isCampaign: Boolean = false,
+    val villainsSet: MutableSet<String> = mutableSetOf()
 ) {
     data class Player(
         val name: String,
