@@ -13,7 +13,7 @@ class AddPackToCollectionUseCaseImp @Inject constructor(
 ) : AddPackToCollectionUseCase {
 
     override suspend fun invoke(code: String) {
-        val pack = packsRepository.getByCode(code)
+        val pack = packsRepository.get(code)
         collectionRepository.addPack(pack)
     }
 }

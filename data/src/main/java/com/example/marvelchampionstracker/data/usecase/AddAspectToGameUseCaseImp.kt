@@ -11,6 +11,6 @@ class AddAspectToGameUseCaseImp @Inject constructor(
 ) : AddAspectToGameUseCase {
 
     override fun invoke(aspect: String) {
-        repository.addAspect(aspect)
+        repository.addAspectToCurrentGame(aspect)
     }
 }

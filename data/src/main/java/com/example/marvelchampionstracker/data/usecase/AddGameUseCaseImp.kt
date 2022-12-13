@@ -11,6 +11,6 @@ class AddGameUseCaseImp @Inject constructor(
 ) : AddGameUseCase {
 
     override suspend fun invoke(timeStamp: Long) {
-        repository.createGame(timeStamp)
+        repository.createNewGame(timeStamp)
     }
 }

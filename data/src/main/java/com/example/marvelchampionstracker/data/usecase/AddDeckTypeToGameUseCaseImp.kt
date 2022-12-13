@@ -11,6 +11,6 @@ class AddDeckTypeToGameUseCaseImp @Inject constructor(
 ) : AddDeckTypeToGameUseCase {
 
     override fun invoke(type: String) {
-        repository.addDeckType(type)
+        repository.addDeckTypeToCurrentGame(type)
     }
 }

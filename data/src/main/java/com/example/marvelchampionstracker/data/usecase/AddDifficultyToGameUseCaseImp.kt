@@ -11,6 +11,6 @@ class AddDifficultyToGameUseCaseImp @Inject constructor(
 ) : AddDifficultyToGameUseCase {
 
     override fun invoke(name: String) {
-        repository.addDifficulty(name)
+        repository.addDifficultyToCurrentGame(name)
     }
 }

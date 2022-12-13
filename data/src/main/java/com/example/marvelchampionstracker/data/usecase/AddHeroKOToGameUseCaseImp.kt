@@ -11,6 +11,6 @@ class AddHeroKOToGameUseCaseImp @Inject constructor(
 ) : AddHeroKOToGameUseCase {
 
     override fun invoke(isKO: Boolean) {
-        repository.addHeroKO(isKO)
+        repository.addHeroStateToCurrentGame(isKO)
     }
 }

@@ -82,4 +82,8 @@ internal abstract class  UseCaseModule {
     @Singleton
     @Binds
     abstract fun bindAddDifficultyToGameUseCase(useCase: AddDifficultyToGameUseCaseImp): AddDifficultyToGameUseCase
+
+    @Singleton
+    @Binds
+    abstract fun bindAddResultToGameUseCase(useCase: AddResultToGameUseCaseImp): AddResultToGameUseCase
 }

@@ -11,6 +11,6 @@ class AddEncounterSetToGameUseCaseImp @Inject constructor(
 ) : AddEncounterSetToGameUseCase {
 
     override fun invoke(name: String) {
-        repository.addEncounterSet(name)
+        repository.addEncounterSetToCurrentGame(name)
     }
 }

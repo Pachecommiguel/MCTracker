@@ -11,6 +11,6 @@ class AddCampaignToGameUseCaseImp @Inject constructor(
 ) : AddCampaignToGameUseCase {
 
     override fun invoke(isCampaign: Boolean) {
-        repository.addCampaign(isCampaign)
+        repository.addCampaignModeToCurrentGame(isCampaign)
     }
 }

@@ -26,7 +26,7 @@ class PacksRepositoryImp @Inject constructor(
         return packsMap.size
     }
 
-    override fun getByCode(code: String): CollectionModel.Pack {
+    override fun get(code: String): CollectionModel.Pack {
         val value = packsMap.getValue(code)
         return ModelMapper.toPackModel(value)
     }

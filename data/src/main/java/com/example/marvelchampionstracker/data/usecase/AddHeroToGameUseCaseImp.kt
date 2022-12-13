@@ -11,6 +11,6 @@ class AddHeroToGameUseCaseImp @Inject constructor(
 ) : AddHeroToGameUseCase {
 
     override fun invoke(name: String) {
-        repository.addHero(name)
+        repository.addHeroToCurrentGame(name)
     }
 }

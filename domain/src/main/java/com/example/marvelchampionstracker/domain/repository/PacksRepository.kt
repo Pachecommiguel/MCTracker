@@ -6,5 +6,5 @@ import com.example.marvelchampionstracker.domain.model.PacksModel
 interface PacksRepository {
     suspend fun getAll(): PacksModel
     suspend fun getSize(): Int
-    fun getByCode(code: String): CollectionModel.Pack
+    fun get(code: String): CollectionModel.Pack
 }

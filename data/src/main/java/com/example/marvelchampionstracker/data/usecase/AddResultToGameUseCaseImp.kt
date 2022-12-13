@@ -2,15 +2,15 @@ package com.example.marvelchampionstracker.data.usecase
 
 import com.example.marvelchampionstracker.domain.model.GamesModel
 import com.example.marvelchampionstracker.domain.repository.GamesRepository
-import com.example.marvelchampionstracker.domain.usecase.AddVillainToGameUseCase
+import com.example.marvelchampionstracker.domain.usecase.AddResultToGameUseCase
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class AddVillainToGameUseCaseImp @Inject constructor(
+class AddResultToGameUseCaseImp @Inject constructor(
     private val repository: GamesRepository<Flow<GamesModel>>
-) : AddVillainToGameUseCase {
+) : AddResultToGameUseCase {
 
-    override fun invoke(name: String) {
-        repository.addVillainToCurrentGame(name)
+    override fun invoke(result: String) {
+        repository.addResultToCurrentGame(result)
     }
 }

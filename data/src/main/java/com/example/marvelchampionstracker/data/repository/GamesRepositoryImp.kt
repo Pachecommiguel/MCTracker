@@ -24,44 +24,48 @@ class GamesRepositoryImp @Inject constructor(
         dao.delete(timeStamp)
     }
 
-    override fun addPlayer(name: String) {
-        val entity = EntityMapper.toPlayerEntity(name)
+    override fun addPlayerToCurrentGame(player: String) {
+        val entity = EntityMapper.toPlayerEntity(player)
         game.playersSet.add(entity)
     }
 
-    override fun createGame(timeStamp: Long) {
+    override fun createNewGame(timeStamp: Long) {
         game = EntityMapper.toGameEntity(timeStamp)
     }
 
-    override fun addHero(name: String) {
-        game.playersSet.last().heroName = name
+    override fun addHeroToCurrentGame(hero: String) {
+        game.playersSet.last().heroName = hero
     }
 
-    override fun addHeroKO(isKO: Boolean) {
+    override fun addHeroStateToCurrentGame(isKO: Boolean) {
         game.playersSet.last().isHeroKO = isKO
     }
 
-    override fun addAspect(aspect: String) {
+    override fun addAspectToCurrentGame(aspect: String) {
         game.playersSet.last().aspectsSet.add(aspect)
     }
 
-    override fun addDeckType(type: String) {
+    override fun addDeckTypeToCurrentGame(type: String) {
         game.playersSet.last().deckType = type
     }
 
-    override fun addCampaign(isCampaign: Boolean) {
+    override fun addCampaignModeToCurrentGame(isCampaign: Boolean) {
         game.isCampaign = isCampaign
     }
 
-    override fun addVillain(name: String) {
-        game.villain = name
+    override fun addVillainToCurrentGame(villain: String) {
+        game.villain = villain
     }
 
-    override fun addEncounterSet(name: String) {
-        game.encountersSet.add(name)
+    override fun addEncounterSetToCurrentGame(set: String) {
+        game.encountersSet.add(set)
     }
 
-    override fun addDifficulty(name: String) {
-        game.difficulty = name
+    override fun addDifficultyToCurrentGame(difficulty: String) {
+        game.difficulty = difficulty
+    }
+
+    override fun addResultToCurrentGame(result: String) {
+        game.result = result
     }
 }
