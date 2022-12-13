@@ -50,4 +50,14 @@ internal abstract class  UseCaseModule {
     @Singleton
     @Binds
     abstract fun bindRemoveGameUseCase(useCase: RemoveGameUseCaseImp): RemoveGameUseCase
+
+    @Singleton
+    @Binds
+    abstract fun bindAddPlayerToGameUseCase(
+        useCase: AddPlayerToGameUseCaseImp
+    ): AddPlayerToGameUseCase
+
+    @Singleton
+    @Binds
+    abstract fun bindAddGameUseCase(useCase: AddGameUseCaseImp): AddGameUseCase
 }

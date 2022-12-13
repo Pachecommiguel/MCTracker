@@ -5,5 +5,10 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class GameEntity(
-    @PrimaryKey val timeStamp: Long
-)
+    @PrimaryKey val timeStamp: Long,
+    val players: MutableSet<Player> = mutableSetOf()
+) {
+    data class Player(
+        val name: String
+    )
+}
