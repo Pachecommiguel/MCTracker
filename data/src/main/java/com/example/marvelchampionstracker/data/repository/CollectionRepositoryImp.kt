@@ -1,5 +1,6 @@
 package com.example.marvelchampionstracker.data.repository
 
+import com.example.marvelchampionstracker.data.utils.EntityMapper
 import com.example.marvelchampionstracker.data.utils.ModelMapper
 import com.example.marvelchampionstracker.database.pack.PackDao
 import com.example.marvelchampionstracker.domain.model.CollectionModel
@@ -17,4 +18,13 @@ class CollectionRepositoryImp @Inject constructor(
     override suspend fun getAll() = dao.getAll().map(ModelMapper::toCollectionModel)
 
     override suspend fun getSize() = dao.getSize()
+
+    override suspend fun addPack(pack: CollectionModel.Pack) {
+        val entity = EntityMapper.toCollectionEntity(pack)
+        dao.insert(entity)
+    }
+
+    override suspend fun removePack(code: String) {
+        dao.delete(code)
+    }
 }

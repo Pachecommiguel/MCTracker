@@ -13,4 +13,7 @@ interface GameDao {
 
     @Insert
     suspend fun insert(entity: GameEntity)
+
+    @Query("DELETE FROM GameEntity WHERE timeStamp=:timeStamp")
+    suspend fun delete(timeStamp: Long)
 }

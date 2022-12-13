@@ -16,4 +16,7 @@ interface PackDao {
 
     @Insert
     suspend fun insert(pack: PackEntity)
+
+    @Query("DELETE FROM PackEntity WHERE code=:code")
+    suspend fun delete(code: String)
 }

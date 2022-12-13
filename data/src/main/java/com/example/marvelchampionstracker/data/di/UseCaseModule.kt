@@ -1,15 +1,9 @@
 package com.example.marvelchampionstracker.data.di
 
-import com.example.marvelchampionstracker.data.usecase.GetAvailablePacksUseCaseImp
-import com.example.marvelchampionstracker.data.usecase.GetCollectionUseCaseImp
-import com.example.marvelchampionstracker.data.usecase.GetGamesUseCaseImp
-import com.example.marvelchampionstracker.data.usecase.GetPacksUseCaseImp
+import com.example.marvelchampionstracker.data.usecase.*
 import com.example.marvelchampionstracker.domain.model.CollectionModel
 import com.example.marvelchampionstracker.domain.model.GamesModel
-import com.example.marvelchampionstracker.domain.usecase.GetAvailablePacksUseCase
-import com.example.marvelchampionstracker.domain.usecase.GetCollectionUseCase
-import com.example.marvelchampionstracker.domain.usecase.GetGamesUseCase
-import com.example.marvelchampionstracker.domain.usecase.GetPacksUseCase
+import com.example.marvelchampionstracker.domain.usecase.*
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -27,7 +21,15 @@ internal abstract class  UseCaseModule {
 
     @Singleton
     @Binds
-    abstract fun bindGetCollectionUseCase(useCase: GetCollectionUseCaseImp): GetCollectionUseCase<Flow<CollectionModel>>
+    abstract fun bindGetCollectionUseCase(
+        useCase: GetCollectionUseCaseImp
+    ): GetCollectionUseCase<Flow<CollectionModel>>
+
+    @Singleton
+    @Binds
+    abstract fun bindAddPackToCollectionUseCase(
+        useCase: AddPackToCollectionUseCaseImp
+    ): AddPackToCollectionUseCase
 
     @Singleton
     @Binds
@@ -35,5 +37,17 @@ internal abstract class  UseCaseModule {
 
     @Singleton
     @Binds
-    abstract fun bindGetAvailablePacksUseCase(useCase: GetAvailablePacksUseCaseImp): GetAvailablePacksUseCase
+    abstract fun bindGetAvailablePacksUseCase(
+        useCase: GetAvailablePacksUseCaseImp
+    ): GetAvailablePacksUseCase
+
+    @Singleton
+    @Binds
+    abstract fun bindRemovePackFromCollectionUseCase(
+        useCase: RemovePackFromCollectionUseCaseImp
+    ): RemovePackFromCollectionUseCase
+
+    @Singleton
+    @Binds
+    abstract fun bindRemoveGameUseCase(useCase: RemoveGameUseCaseImp): RemoveGameUseCase
 }

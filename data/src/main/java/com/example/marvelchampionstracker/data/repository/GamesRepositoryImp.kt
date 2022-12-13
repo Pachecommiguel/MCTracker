@@ -15,4 +15,8 @@ class GamesRepositoryImp @Inject constructor(
 ) : GamesRepository<Flow<@JvmSuppressWildcards GamesModel>> {
 
     override suspend fun getAll(limit: Int) = dao.getAll(limit).map(ModelMapper::toGamesModel)
+
+    override suspend fun remove(timeStamp: Long) {
+        dao.delete(timeStamp)
+    }
 }

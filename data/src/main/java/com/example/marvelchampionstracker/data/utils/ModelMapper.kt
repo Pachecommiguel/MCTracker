@@ -15,15 +15,17 @@ object ModelMapper {
         }
     )
 
-    fun toPacksModel(list: List<PacksResponse>) = PacksModel(
-        list.map {
-            PacksModel.Pack(it.name)
+    fun toPacksModel(map: Map<String, PacksResponse>) = PacksModel(
+        map.map {
+            PacksModel.Pack(it.value.name)
         }
     )
 
     fun toCollectionModel(list: List<PackEntity>) = CollectionModel(
         list.map {
-            CollectionModel.Pack(it.name)
+            CollectionModel.Pack(it.code, it.name)
         }
     )
+
+    fun toPackModel(response: PacksResponse) = CollectionModel.Pack(response.code, response.name)
 }
