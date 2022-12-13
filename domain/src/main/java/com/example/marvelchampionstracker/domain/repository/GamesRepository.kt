@@ -8,4 +8,5 @@ interface GamesRepository<T> {
     fun addHeroToPlayer(name: String)
     fun addHeroKO(isKO: Boolean)
     fun addAspect(aspect: String)
+    fun addDeckType(type: String)
 }

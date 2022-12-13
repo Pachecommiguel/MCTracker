@@ -12,6 +12,7 @@ data class GameEntity(
         val name: String,
         var heroName: String = String(),
         var isHeroKO: Boolean = false,
-        val aspects: MutableSet<String> = mutableSetOf()
+        val aspects: MutableSet<String> = mutableSetOf(),
+        var deckType: String = String()
     )
 }

@@ -10,7 +10,7 @@ class AddHeroToGameUseCaseImp @Inject constructor(
     private val repository: GamesRepository<Flow<GamesModel>>
 ) : AddHeroToGameUseCase {
 
-    override suspend fun invoke(name: String) {
+    override fun invoke(name: String) {
         repository.addHeroToPlayer(name)
     }
 }

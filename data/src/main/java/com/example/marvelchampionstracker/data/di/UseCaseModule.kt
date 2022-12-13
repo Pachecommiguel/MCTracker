@@ -76,4 +76,10 @@ internal abstract class  UseCaseModule {
     abstract fun bindAddAspectToGameUseCase(
         useCase: AddAspectToGameUseCaseImp
     ): AddAspectToGameUseCase
+
+    @Singleton
+    @Binds
+    abstract fun bindAddDeckTypeToGameUseCase(
+        useCase: AddDeckTypeToGameUseCaseImp
+    ): AddDeckTypeToGameUseCase
 }

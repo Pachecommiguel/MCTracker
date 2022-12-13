@@ -44,4 +44,8 @@ class GamesRepositoryImp @Inject constructor(
     override fun addAspect(aspect: String) {
         game.players.last().aspects.add(aspect)
     }
+
+    override fun addDeckType(type: String) {
+        game.players.last().deckType = type
+    }
 }

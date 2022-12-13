@@ -10,7 +10,7 @@ class AddAspectToGameUseCaseImp @Inject constructor(
     private val repository: GamesRepository<Flow<GamesModel>>
 ) : AddAspectToGameUseCase {
 
-    override suspend fun invoke(aspect: String) {
+    override fun invoke(aspect: String) {
         repository.addAspect(aspect)
     }
 }
