@@ -7,4 +7,5 @@ interface GamesRepository<T> {
     fun createGame(timeStamp: Long)
     fun addHeroToPlayer(name: String)
     fun addHeroKO(isKO: Boolean)
+    fun addAspect(aspect: String)
 }

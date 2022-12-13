@@ -10,11 +10,8 @@ data class GameEntity(
 ) {
     data class Player(
         val name: String,
-        val hero: Hero = Hero()
-    ) {
-        data class Hero(
-            var name: String = String(),
-            var isKO: Boolean = false
-        )
-    }
+        var heroName: String = String(),
+        var isHeroKO: Boolean = false,
+        val aspects: MutableSet<String> = mutableSetOf()
+    )
 }

@@ -70,4 +70,10 @@ internal abstract class  UseCaseModule {
     abstract fun bindAddHeroKOToGameUseCase(
         useCase: AddHeroKOToGameUseCaseImp
     ): AddHeroKOToGameUseCase
+
+    @Singleton
+    @Binds
+    abstract fun bindAddAspectToGameUseCase(
+        useCase: AddAspectToGameUseCaseImp
+    ): AddAspectToGameUseCase
 }

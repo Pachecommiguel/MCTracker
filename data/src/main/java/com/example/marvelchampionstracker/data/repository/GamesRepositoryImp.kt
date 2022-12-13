@@ -34,10 +34,14 @@ class GamesRepositoryImp @Inject constructor(
     }
 
     override fun addHeroToPlayer(name: String) {
-        game.players.last().hero.name = name
+        game.players.last().heroName = name
     }
 
     override fun addHeroKO(isKO: Boolean) {
-        game.players.last().hero.isKO = isKO
+        game.players.last().isHeroKO = isKO
+    }
+
+    override fun addAspect(aspect: String) {
+        game.players.last().aspects.add(aspect)
     }
 }
