@@ -32,4 +32,8 @@ class GamesRepositoryImp @Inject constructor(
     override fun createGame(timeStamp: Long) {
         game = EntityMapper.toGameEntity(timeStamp)
     }
+
+    override suspend fun addHeroToPlayer(name: String) {
+        game.players.last().hero = name
+    }
 }

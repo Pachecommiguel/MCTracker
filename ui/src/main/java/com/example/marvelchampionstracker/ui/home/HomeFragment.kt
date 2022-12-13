@@ -32,8 +32,7 @@ class HomeFragment : AbstractBaseFragment<HomeState>() {
     }
 
     override fun onState(state: HomeState) {
-        Log.e("games ", state.games.toString())
-        Log.e("packs ", state.availablePacks.toString())
+        Log.e("state ->  ", state.toString())
     }
 
     private fun initViews() {

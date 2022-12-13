@@ -5,4 +5,5 @@ interface GamesRepository<T> {
     suspend fun remove(timeStamp: Long)
     fun addPlayer(name: String)
     fun createGame(timeStamp: Long)
+    suspend fun addHeroToPlayer(name: String)
 }
