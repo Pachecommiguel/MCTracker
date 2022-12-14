@@ -31,13 +31,12 @@ android {
 }
 
 dependencies {
-    implementation "androidx.core:core-ktx:${libraries.core}"
 
     // Hilt
     implementation "com.google.dagger:hilt-android:${libraries.hilt}"
     kapt "com.google.dagger:hilt-android-compiler:${libraries.hilt}"
 
     // Retrofit
-    implementation "com.squareup.retrofit2:retrofit:${libraries.retrofit}"
-    implementation "com.squareup.retrofit2:converter-gson:${libraries.retrofit}"
+    api "com.squareup.retrofit2:retrofit:${libraries.retrofit}"
+    api "com.squareup.retrofit2:converter-gson:${libraries.retrofit}"
 }

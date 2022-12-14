@@ -1,4 +1,4 @@
-package com.example.marvelchampionstracker.network.di
+package com.example.marvelchampionstracker.di.network
 
 import com.example.marvelchampionstracker.network.ApiEndpoints
 import dagger.Module

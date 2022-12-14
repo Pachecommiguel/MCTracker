@@ -1,4 +1,4 @@
-package com.example.marvelchampionstracker.data.di
+package com.example.marvelchampionstracker.di.data
 
 import com.example.marvelchampionstracker.data.repository.*
 import com.example.marvelchampionstracker.domain.model.CollectionModel

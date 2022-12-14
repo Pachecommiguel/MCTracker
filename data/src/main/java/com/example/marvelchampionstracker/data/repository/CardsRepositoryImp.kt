@@ -15,9 +15,11 @@ class CardsRepositoryImp @Inject constructor(
 
     override suspend fun getHeroes(packCode: String): HeroesModel {
         if (!::cards.isInitialized) {
-            cards = mapOf(packCode to service.getCards(packCode))
+            val response = service.getCards(packCode)
+            cards = mapOf(packCode to response)
         }
 
-        return ModelMapper.toHeroesModel(cards.getValue(packCode))
+        val value = cards.getValue(packCode)
+        return ModelMapper.toHeroesModel(value)
     }
 }

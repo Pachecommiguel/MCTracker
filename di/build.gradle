@@ -31,9 +31,7 @@ android {
 }
 
 dependencies {
-    api project(":domain")
-    api project(":network")
-    api project(':persistence')
+    implementation project(':data')
 
     // Hilt
     implementation "com.google.dagger:hilt-android:${libraries.hilt}"

@@ -1,4 +1,4 @@
-package com.example.marvelchampionstracker.database.di
+package com.example.marvelchampionstracker.di.persistence
 
 import com.example.marvelchampionstracker.database.Database
 import dagger.Module

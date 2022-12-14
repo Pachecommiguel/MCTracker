@@ -11,7 +11,7 @@ import com.example.marvelchampionstracker.database.pack.PackEntity
 @TypeConverters(CustomTypeConverter::class)
 @Database(
     entities = [PackEntity::class, GameEntity::class],
-    version = 2,
+    version = 1,
     exportSchema = false
 )
 abstract class Database : RoomDatabase() {

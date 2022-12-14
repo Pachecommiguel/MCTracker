@@ -31,12 +31,11 @@ android {
 }
 
 dependencies {
-    implementation "androidx.core:core-ktx:${libraries.core}"
     implementation "com.google.code.gson:gson:${libraries.gson}"
 
     // Room
-    implementation "androidx.room:room-runtime:${libraries.room}"
-    implementation "androidx.room:room-ktx:${libraries.room}"
+    api "androidx.room:room-runtime:${libraries.room}"
+    api "androidx.room:room-ktx:${libraries.room}"
     kapt "androidx.room:room-compiler:${libraries.room}"
 
     // Hilt

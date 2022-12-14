@@ -11,32 +11,41 @@ import com.example.marvelchampionstracker.network.pack.PacksResponse
 
 object ModelMapper {
 
-    fun toGamesModel(list: List<GameEntity>) = GamesModel(
-        list.map {
+    fun toGamesModel(list: List<GameEntity>): GamesModel {
+        val tmpList = list.map {
             GamesModel.Game(it.timeStamp)
         }
-    )
 
-    fun toPacksModel(map: Map<String, PacksResponse>) = PacksModel(
-        map.map {
+        return GamesModel(tmpList)
+    }
+
+    fun toPacksModel(map: Map<String, PacksResponse>): PacksModel {
+        val tmpList = map.map {
             PacksModel.Pack(it.value.name)
         }
-    )
 
-    fun toCollectionModel(list: List<PackEntity>) = CollectionModel(
-        list.map {
+        return PacksModel(tmpList)
+    }
+
+    fun toCollectionModel(list: List<PackEntity>): CollectionModel {
+        val tmpList = list.map {
             CollectionModel.Pack(it.code, it.name)
         }
-    )
+
+        return CollectionModel(tmpList)
+    }
 
     fun toPackModel(response: PacksResponse) = CollectionModel.Pack(response.code, response.name)
 
-    fun toHeroesModel(list: List<CardsResponse>) = HeroesModel(
-        list.filter { it.typeCode == CardTypeCode.HERO.typeCode }.map {
-            HeroesModel.Hero(
-                it.cardSetName,
-                it.imageSrc
-            )
+    fun toHeroesModel(list: List<CardsResponse>): HeroesModel {
+        val heroList = list.filter {
+            it.typeCode == CardTypeCode.HERO.typeCode
         }
-    )
+
+        val tmpList = heroList.map {
+            HeroesModel.Hero(it.cardSetName, it.imageSrc)
+        }
+
+        return HeroesModel(tmpList)
+    }
 }
