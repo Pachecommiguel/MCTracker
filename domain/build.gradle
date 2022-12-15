@@ -30,4 +30,7 @@ android {
 
 dependencies {
     api "androidx.core:core-ktx:${libraries.core}"
+
+    // Coroutines
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:${libraries.coroutines}"
 }

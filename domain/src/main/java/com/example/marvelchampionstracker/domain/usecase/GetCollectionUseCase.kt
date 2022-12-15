@@ -1,5 +1,8 @@
 package com.example.marvelchampionstracker.domain.usecase
 
-interface GetCollectionUseCase<T> {
-    suspend operator fun invoke(): T
+import com.example.marvelchampionstracker.domain.model.CollectionModel
+import kotlinx.coroutines.flow.Flow
+
+interface GetCollectionUseCase {
+    suspend operator fun invoke(): Flow<CollectionModel>
 }

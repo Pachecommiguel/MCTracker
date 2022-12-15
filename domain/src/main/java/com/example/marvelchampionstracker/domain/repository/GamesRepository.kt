@@ -1,7 +1,10 @@
 package com.example.marvelchampionstracker.domain.repository
 
-interface GamesRepository<T> {
-    suspend fun getAll(limit: Int): T
+import com.example.marvelchampionstracker.domain.model.GamesModel
+import kotlinx.coroutines.flow.Flow
+
+interface GamesRepository {
+    suspend fun getAll(limit: Int): Flow<GamesModel>
     suspend fun remove(timeStamp: Long)
     suspend fun saveCurrentGame()
     fun addPlayerToCurrentGame(player: String)

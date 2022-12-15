@@ -1,5 +1,8 @@
 package com.example.marvelchampionstracker.domain.usecase
 
-interface GetGamesUseCase<T> {
-    suspend operator fun invoke(limit: Int = -1): T
+import com.example.marvelchampionstracker.domain.model.GamesModel
+import kotlinx.coroutines.flow.Flow
+
+interface GetGamesUseCase {
+    suspend operator fun invoke(limit: Int = -1): Flow<GamesModel>
 }

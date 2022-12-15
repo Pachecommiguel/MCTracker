@@ -55,9 +55,6 @@ dependencies {
     implementation "com.google.dagger:hilt-android:${libraries.hilt}"
     kapt "com.google.dagger:hilt-android-compiler:${libraries.hilt}"
 
-    // Coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${libraries.coroutines}"
-
     // Glide
     implementation "com.github.bumptech.glide:glide:${libraries.glide}"
 }

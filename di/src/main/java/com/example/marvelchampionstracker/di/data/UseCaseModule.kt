@@ -1,14 +1,11 @@
 package com.example.marvelchampionstracker.di.data
 
 import com.example.marvelchampionstracker.data.usecase.*
-import com.example.marvelchampionstracker.domain.model.CollectionModel
-import com.example.marvelchampionstracker.domain.model.GamesModel
 import com.example.marvelchampionstracker.domain.usecase.*
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Singleton
 
 @Module
@@ -17,11 +14,11 @@ internal abstract class  UseCaseModule {
 
     @Singleton
     @Binds
-    abstract fun bindGetGamesUseCase(useCase: GetGamesUseCaseImp): GetGamesUseCase<Flow<GamesModel>>
+    abstract fun bindGetGamesUseCase(useCase: GetGamesUseCaseImp): GetGamesUseCase
 
     @Singleton
     @Binds
-    abstract fun bindGetCollectionUseCase(useCase: GetCollectionUseCaseImp): GetCollectionUseCase<Flow<CollectionModel>>
+    abstract fun bindGetCollectionUseCase(useCase: GetCollectionUseCaseImp): GetCollectionUseCase
 
     @Singleton
     @Binds
