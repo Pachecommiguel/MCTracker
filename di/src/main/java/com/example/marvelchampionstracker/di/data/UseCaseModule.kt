@@ -38,57 +38,5 @@ internal abstract class  UseCaseModule {
 
     @Singleton
     @Binds
-    abstract fun bindRemoveGameUseCase(useCase: RemoveGameUseCaseImp): RemoveGameUseCase
-
-    @Singleton
-    @Binds
-    abstract fun bindAddPlayerToGameUseCase(useCase: AddPlayerToCurrentGameUseCaseImp): AddPlayerToCurrentGameUseCase
-
-    @Singleton
-    @Binds
-    abstract fun bindAddGameUseCase(useCase: CreateNewGameUseCaseImp): CreateNewGameUseCase
-
-    @Singleton
-    @Binds
-    abstract fun bindAddHeroToGameUseCase(useCase: AddHeroToCurrentGameUseCaseImp): AddHeroToCurrentGameUseCase
-
-    @Singleton
-    @Binds
-    abstract fun bindAddHeroKOToGameUseCase(useCase: AddHeroStateToCurrentGameUseCaseImp): AddHeroStateToCurrentGameUseCase
-
-    @Singleton
-    @Binds
-    abstract fun bindAddAspectToGameUseCase(useCase: AddAspectToCurrentGameUseCaseImp): AddAspectToCurrentGameUseCase
-
-    @Singleton
-    @Binds
-    abstract fun bindAddDeckTypeToGameUseCase(useCase: AddDeckTypeToCurrentGameUseCaseImp): AddDeckTypeToCurrentGameUseCase
-
-    @Singleton
-    @Binds
-    abstract fun bindAddCampaignToGameUseCase(useCase: AddCampaignModeToCurrentGameUseCaseImp): AddCampaignModeToCurrentGameUseCase
-
-    @Singleton
-    @Binds
-    abstract fun bindAddVillainToGameUseCase(useCase: AddVillainToCurrentGameUseCaseImp): AddVillainToCurrentGameUseCase
-
-    @Singleton
-    @Binds
-    abstract fun bindAddEncounterSetToGameUseCase(useCase: AddEncounterSetToCurrentGameUseCaseImp): AddEncounterSetToCurrentGameUseCase
-
-    @Singleton
-    @Binds
-    abstract fun bindAddDifficultyToGameUseCase(useCase: AddDifficultyToCurrentGameUseCaseImp): AddDifficultyToCurrentGameUseCase
-
-    @Singleton
-    @Binds
-    abstract fun bindAddResultToGameUseCase(useCase: AddResultToCurrentGameUseCaseImp): AddResultToCurrentGameUseCase
-
-    @Singleton
-    @Binds
-    abstract fun bindSaveCurrentGameUseCase(useCase: SaveCurrentGameUseCaseImp): SaveCurrentGameUseCase
-
-    @Singleton
-    @Binds
     abstract fun bindGetHeroesUseCase(useCase: GetHeroesUseCaseImp): GetHeroesUseCase
 }

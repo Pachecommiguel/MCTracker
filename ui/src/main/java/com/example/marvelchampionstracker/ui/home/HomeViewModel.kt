@@ -5,10 +5,9 @@ import androidx.lifecycle.viewModelScope
 import com.example.marvelchampionstracker.app.R
 import com.example.marvelchampionstracker.domain.usecase.GetAvailablePacksUseCase
 import com.example.marvelchampionstracker.domain.usecase.GetGamesUseCase
-import com.example.marvelchampionstracker.ui.common.BaseViewModel
-import com.example.marvelchampionstracker.ui.utils.StateMapper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -16,30 +15,34 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(
     private val getGamesUseCase: GetGamesUseCase,
     private val getAvailablePacksUseCase: GetAvailablePacksUseCase
-) : ViewModel(), BaseViewModel<HomeState> {
+) : ViewModel() {
+
+    var state = MutableStateFlow(HomeState()); private set
+
+    init {
+        getGames()
+        getAvailablePacks()
+    }
+
+    private fun getGames() {
+        viewModelScope.launch(CoroutineExceptionHandler { _, _ ->
+            state.value = state.value.copy(messageId = R.string.home_snackbar_message_games)
+        }) {
+            getGamesUseCase(LAST_GAMES).collect {
+                state.value = state.value.copy(gamesModel = it)
+            }
+        }
+    }
+
+    private fun getAvailablePacks() {
+        viewModelScope.launch(CoroutineExceptionHandler { _, _ ->
+            state.value = state.value.copy(messageId = R.string.home_snackbar_message_packs)
+        }) {
+            state.value = state.value.copy(packsAvailable = getAvailablePacksUseCase())
+        }
+    }
 
     companion object {
         private const val LAST_GAMES = 5
-    }
-
-    override fun getState(
-        onState: (state: HomeState) -> Unit,
-        onError: (messageId: Int) -> Unit
-    ) {
-        viewModelScope.launch(CoroutineExceptionHandler { _, _ ->
-            onError(R.string.home_snackbar_message_games)
-        }) {
-            getGamesUseCase(LAST_GAMES).collect {
-                val state = StateMapper.toHomeState(it)
-                onState(state)
-            }
-        }
-
-        viewModelScope.launch(CoroutineExceptionHandler { _, _ ->
-            onError(R.string.home_snackbar_message_available_packs)
-        }) {
-            val state = StateMapper.toHomeState(getAvailablePacksUseCase())
-            onState(state)
-        }
     }
 }

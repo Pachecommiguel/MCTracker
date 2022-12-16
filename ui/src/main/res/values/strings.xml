@@ -8,7 +8,7 @@
 
     <!-- Home -->
     <string name="home_snackbar_message_games">Failed to retrieve games</string>
-    <string name="home_snackbar_message_available_packs">Failed to retrieve available packs</string>
+    <string name="home_snackbar_message_packs">Failed to retrieve available packs</string>
 
     <!-- Collection -->
     <string name="collection_snackbar_message">Failed to retrieve collection</string>

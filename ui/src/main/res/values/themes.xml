@@ -1,7 +1,0 @@
-<resources>
-    <style name="Theme.MarvelChampionsTracker" parent="Theme.MaterialComponents.NoActionBar">
-        <item name="android:textColorPrimary">@color/brass</item>
-        <item name="colorOnSurfaceVariant">@color/brass</item>
-        <item name="colorPrimary">@color/gray</item>
-    </style>
-</resources>
